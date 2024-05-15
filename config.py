@@ -37,7 +37,7 @@ def read_config(name='config.json'):
 
 def update_config(new_data, cpath='config.json'):
     old_config = read_config(name=cpath)
-    if 'ROOT' in new_data:
+    if 'ROOT' in new_data.keys():
         new_data['ROOT'] = os.path.normpath(new_data['ROOT'])
     old_config.update(new_data)
 
